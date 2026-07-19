@@ -1,0 +1,17 @@
+:root {
+  --color-bg: #fdf6f2;
+  --color-pink: #f7d8dc;
+  --color-blue: #cfe8ff;
+  --color-purple: #d6c6ff;
+  --color-green: #a8d59b;
+  --color-yellow: #ffe7a3;
+  --color-border: #e8bcc1;
+  --color-text: #303030;
+  --color-muted: #9a9a9a;
+  --color-window: rgba(255, 255, 255, 0.62);
+  --radius-window: 24px;
+  --radius-card: 16px;
+  --shadow-soft: 0 18px 48px rgba(58, 39, 34, 0.08);
+  --font-body: Arial, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --max-page-width: 1440px;
+}

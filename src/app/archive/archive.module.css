@@ -1,0 +1,72 @@
+.archivePage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, var(--max-page-width));
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--color-bg);
+  animation: desktopEnter 420ms ease-out both;
+}
+.desktopWindow {
+  width: 768px;
+  min-height: 530px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+}
+.windowTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(232, 188, 193, 0.28);
+  background: rgba(242, 242, 240, 0.82);
+  color: #101010;
+  font-size: 14px;
+}
+.desktopArea {
+  position: relative;
+  min-height: 490px;
+}
+.folder {
+  position: absolute;
+}
+.about { top: 26px; left: 414px; }
+.projects { top: 54px; right: 54px; }
+.copywriting { top: 196px; left: 354px; }
+.strategy { top: 182px; right: 56px; }
+.creative { right: 158px; bottom: 136px; }
+.contact { left: 380px; bottom: 56px; }
+.characterNini,
+.characterKuro {
+  position: absolute;
+  bottom: 78px;
+  opacity: 0.85;
+}
+.characterKuro { right: 218px; }
+.characterNini { right: 120px; }
+@keyframes desktopEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 900px) {
+  .desktopWindow { width: calc(100vw - 48px); }
+  .desktopArea {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-content: start;
+    padding: 32px;
+  }
+  .folder { position: static; }
+}
